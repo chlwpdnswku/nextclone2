@@ -1,0 +1,88 @@
+import Image from 'next/image';
+import React from 'react';
+import twitchImg from '../public/assets/projects/twitch.jpg';
+import { RiRadioButtonFill } from 'react-icons/ri';
+import Link from 'next/link';
+
+const twitch = () => {
+  return (
+    <div className='w-full'>
+      <div className='w-screen h-[50vh] relative'>
+        <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
+        <Image
+          className='absolute z-1'
+          layout='fill'
+          objectFit='cover'
+          src={twitchImg}
+          alt='/'
+        />
+        <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
+          <h2 className='py-2'>Twitch UI</h2>
+          <h3>Next JS / Tailwind / Next Auth</h3>
+        </div>
+      </div>
+
+      <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
+        <div className='col-span-4'>
+          <p>Project</p>
+          <h2>Overview</h2>
+          <p>
+            저는 트위치사이트를 클론 코딩을 하였습니다 . 만든 기간은 2022 08.03
+            <br></br>~ 2022.08.25 입니다 . 트위치사이트를 클론 코딩을 하여 저는
+            로그인<br></br>
+            구현까지하여 인증된 사람이면 상반바를 바뀌는 부분을 구현하였습니다.
+            제가 이 프로젝트를 하면서 아쉬운점은
+            <br></br>
+            현재 데이터들을 정적으로 할당을해서 제가 임의적으로 데이터를
+            구현하였습니다 백인드 개발자 분이 이 부분을 해결을<br></br>해 주시면
+            정말 좋을 것 같습니다. 이상 저의 트위치 프로젝트 였습니다.
+          </p>
+          <a
+            href='https://twitch-nextjs-tailwind.vercel.app/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
+          </a>
+          <a
+            href='https://github.com/fireclint/twitch-nextjs-tailwind'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <button className='px-8 py-2 mt-4'>Code</button>
+          </a>
+        </div>
+        <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+          <div className='p-2'>
+            <p className='text-center font-bold pb-2'>Technologies</p>
+            <div className='grid grid-cols-3 md:grid-cols-1'>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Next.JS
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Tailwind
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Javascript
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Next Auth
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Github Auth
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Google Auth
+              </p>
+            </div>
+          </div>
+        </div>
+        <Link href='/#projects'>
+          <p className='underline cursor-pointer'>Back</p>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default twitch;
